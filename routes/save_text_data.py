@@ -1,16 +1,11 @@
-import json
-
 from fastapi import APIRouter, Depends, HTTPException
-from requests import Session
 from sqlalchemy import desc
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.future import select
 from database import get_db
 from functions.get_current_user import get_current_user
 from models import Entry, User
 from routes.analyze import analyze_text
 from schemas import EntryCreate, EntryResponse, EntrySelectEmotion
-from fastapi import Request
 from sqlalchemy.future import select
 
 router = APIRouter()
@@ -32,7 +27,6 @@ async def create_entry(entry: EntryCreate, db: AsyncSession = Depends(get_db)):
         await db.flush()
 
     return db_entry
-
 
 
 @router.post("/entries/{entry_id}/select-emotion", response_model=EntryResponse)

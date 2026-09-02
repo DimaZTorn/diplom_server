@@ -1,4 +1,4 @@
 .env
 .venv
 .idea
-rubert_finetuned/
+rubert_finetuned

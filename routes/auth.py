@@ -5,7 +5,7 @@ from database import get_db
 from models import User, hash_password, verify_password
 from schemas import UserCreate, UserLogin
 from datetime import datetime, timedelta
-from jose import JWTError, jwt
+from jose import jwt
 
 SECRET_KEY = "secret_key"
 ALGORITHM = "HS256"

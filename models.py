@@ -34,5 +34,4 @@ class Entry(Base):
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     created_at = Column(DateTime, default=func.now())
 
-    # Добавляем связь с моделью User
     user = relationship("User", back_populates="entries")

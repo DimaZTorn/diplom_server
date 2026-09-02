@@ -13,9 +13,8 @@ DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_PORT = os.getenv("DB_PORT", "5432")
 DB_NAME = os.getenv("DB_NAME", "Diplom")
 
-# Собираем безопасную f-строку
 DATABASE_URL = f"postgresql+asyncpg://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-# Создаём движок
+
 engine = create_async_engine(DATABASE_URL, echo=True)
 
 # Базовый класс для моделей
