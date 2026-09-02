@@ -1,5 +1,4 @@
 .env
 .venv
-.model_toxic.py
 .idea
 rubert_finetuned/
