@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+sqlalchemy
+asyncpg
+transformers
+torch
+pandas
+scikit-learn
+passlib
+python-jose
+requests
+python-dotenv
